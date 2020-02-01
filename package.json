@@ -8,8 +8,10 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@foxzilla/rules": "^1.0.0-beta.1",
     "accept-language-middleware": "^1.1.0",
     "bootstrap": "^4.3.1",
+    "codeflask": "^1.4.1",
     "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
     "cross-env": "^6.0.3",
@@ -24,7 +26,8 @@
     "marked": "^0.7.0",
     "morgan": "~1.9.1",
     "moveto": "^1.8.2",
-    "node-sass-middleware": "0.11.0"
+    "node-sass-middleware": "0.11.0",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@types/moveto": "^1.8.0",

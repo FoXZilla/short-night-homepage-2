@@ -1,0 +1,45 @@
+<%- include common/_head.ejs %>
+    <script>const EXAMPLE = <%- JSON.stringify(example) %>;</script>
+</head>
+<body class="snh-body example-view">
+    <%- include common/_nav.ejs %>
+    <div class="readme-view-placeholder"></div>
+    <div class="readme-view" id="readme-view" :style="expand ? 'height: 80vh;' : 'overflow: hidden;'">
+        <div class="readme-port" ref="port">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header"><a href="<%= example.usageUrl %>" target="_blank"><%= example.themeName %></a></div>
+                    <div v-if="mdHtml" v-html="mdHtml" class="card-body"></div>
+                    <div v-else class="text-center pb-3 pt-3">
+                        <i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-show="!expand" class="expand-container" @click="expand = true">
+            <i class="fa fa-angle-double-down fa-lg" aria-hidden="true"></i>
+            <%= t('button.expand') %>
+        </div>
+    </div>
+    <div class="container-fluid editor">
+        <div class="row">
+            <div class="col-12 col-xl-6 col-md-6 code-container">
+                <div id="code-editor"></div>
+            </div>
+            <div class="col-12 col-xl-6 col-md-6 timeline-container">
+                <div class="timeline-wrapper mt-xl-5 mt-lg-0">
+                    <div id="alert" class="alert alert-danger" style="display: none" role="alert"></div>
+                    <i id="save-timeline" class="fa fa-floppy-o" aria-hidden="true"></i>
+                    <div id="timeline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="/javascripts/example-view.js"></script>
+    <% for(let jsFile of example.jsFiles) { %>
+        <script src="<%= jsFile %>"></script>
+    <% } %>
+    <% include common/_foot.ejs %>
+</body>
+</html>

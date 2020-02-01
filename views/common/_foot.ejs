@@ -1,12 +1,11 @@
-<div class="pxer-foot">
+<div class="snh-foot">
     <div class="container">
         <p>
-            Copyright &copy; 2014-2019
-            <a href="http://pxer.pea3nut.org/" target="_blank" class="icp-link">pea3nut.org</a>
-            by <a href="http://pea3nut.info/" target="_blank" class="icp-link">pea3nut(花生PeA)</a>
+            Copyleft &copy; 2019-2020
+            by <a href="https://github.com/FoXZilla" target="_blank" class="icp-link">FoXZilla</a>
         </p>
         <p>
-            Edit <a href="https://github.com/pea3nut/pxer-homepage-2" target="_blank" class="icp-link">this page</a> on Github. View the <a href="https://github.com/FoXZilla/Pxer" target="_blank" class="icp-link">Pxer source code</a>.
+            Edit <a href="https://github.com/FoXZilla/short-night-homepage-2" target="_blank" class="icp-link">this page</a> on Github. View the <a href="https://github.com/FoXZilla/short-night" target="_blank" class="icp-link">Short-Night source code</a>.
         </p>
     </div>
 </div>
@@ -14,15 +13,16 @@
 <script src="https://point.pea3nut.org/sdk/1.0/browser.js"></script>
 <script>
     (function () {
-        let uid = localStorage.getItem('pxer_uid');
+        const uidKey = 'snh_uid';
+        let uid = localStorage.getItem(uidKey);
         if (!uid) {
             uid = Number(Math.random().toString().split('.')[1]).toString(36);
-            localStorage.setItem('pxer_homepage_uid', uid);
+            localStorage.setItem(uidKey, uid);
         }
 
         const eventSender = new EventSender('https://point.pea3nut.org/events', {
             uid,
-            app_name: 'pxer-homepage',
+            app_name: 'short-night-homepage',
             get referer() { return location.href; },
         });
         eventSender.setContent({

@@ -1,6 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark pxer-nav">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark snh-nav">
     <div class="container">
-        <a class="navbar-brand" href="/">Pxer <em class="pxer-nav-beta">β</em></a>
+        <a class="navbar-brand" href="/">
+            <img src="/images/foxzilla.png" width="30" height="30" alt="foxzilla">
+        </a>
+        <a class="navbar-brand" href="/">Short Night</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,40 +13,19 @@
                     <a class="nav-link" href="/"><%= t('nav.home') %></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/install"><%= t('nav.install') %></a>
+                    <a class="nav-link" href="https://github.com/FoXZilla/short-night/wiki" target='_blank'><%= t('nav.usingEngine') %></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <%= t('nav.getHelp') %>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="https://github.com/FoXZilla/Pxer/issues/new?template=bug-report.md&title=BUG%3A" target="_blank"><%= t('nav.fileBug') %></a>
-                        <a class="dropdown-item" href="https://github.com/FoXZilla/Pxer/issues/new?template=feature-request.md&title=FEAT%3A+" target="_blank"><%= t('nav.requestFeature') %></a>
-                        <a class="dropdown-item" href="https://github.com/FoXZilla/Pxer/issues/new?template=other.md" target="_blank"><%= t('nav.openTicket') %></a>
-                        <% if (lang === 'zh') { %>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/doc/donation" ><%= t('nav.donation') %></a>
-                        <% } %>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/example" target='_blank'><%= t('nav.examples') %></a>
                 </li>
-                <% if (lang === 'zh') { %>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://jq.qq.com/?_wv=1027&k=46nvvs6" target="_blank">加入QQ群</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://v1.pxer.pea3nut.org">访问旧版</a>
-                    </li>
-                <% } %>
                 <li class="nav-item dropdown">
                     <a class="nav-link national-flag-link" href="#" id="nationalFlagDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="/images/national-flag/circle/CH@2x.png" alt="china" style="z-index: 600" />
                         <img src="/images/national-flag/circle/UK@2x.png" alt="english" style="z-index: 500" />
-                        <img src="/images/national-flag/circle/JP@2x.png" alt="japanese" style="z-index: 400" />
                     </a>
                     <div class="dropdown-menu national-flag-menu" aria-labelledby="nationalFlagDropdownMenuLink">
                         <a class="dropdown-item" href="?lang=zh"><img src="/images/national-flag/rec/CH@2x.png" />简体中文</a>
                         <a class="dropdown-item" href="?lang=en"><img src="/images/national-flag/rec/UK@2x.png" />English</a>
-                        <a class="dropdown-item" href="?lang=ja"><img src="/images/national-flag/rec/JP@2x.png" />日本語</a>
                     </div>
                 </li>
             </ul>

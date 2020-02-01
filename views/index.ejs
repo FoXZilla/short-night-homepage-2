@@ -1,42 +1,80 @@
 <%- include common/_head.ejs %>
+    <script src='/lib/rules/rules.js'></script>
 </head>
-<body class="pxer-body index">
+<body class="snh-body index">
     <%- include common/_nav.ejs %>
-    <div class="pxer-container jumbotron jumbotron-fluid pxer-jumbotron">
+    <div class="snh-container jumbotron jumbotron-fluid snh-jumbotron main-jumbotron">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 d-none d-md-block pi-big-logo">
-                    <img src="/images/pxerlogo350-20170406.webp" class="img-fluid" alt="logo">
-                </div>
-                <div class="col-md-8">
-                    <div class="pi-header">
-                        <div class="pih-logo">
-                            <img src="/images/pxerlogo350-20170406.webp" class="img-fluid d-md-none" alt="">
-                        </div>
-                        <h1 class="display-3">Pxer 7</h1>
+                <div class="row main-jumbotron-content mt-md-5">
+                    <div class="col-12 col-lg-5 main-code-editor-container">
+                        <div id="main-code-editor"></div>
                     </div>
-                    <div class="pi-body">
-                        <h2><%= t('phrase.maybeTheBest') %></h2>
-                        <div class="lead">
-                            <ul>
-                                <li><%- t('phrase.getWorksEasy') %></li>
-                                <li><%- t('phrase.filterIsVarious') %></li>
-                                <li><%- t('phrase.maintainAlways') %></li>
-                                <li><%- t('phrase.supportAllOs') %></li>
-                                <li><%- t('phrase.downloadIsNeedless') %></li>
-                            </ul>
-                            <p><%= t('phrase.designForPixiv') %></p>
-                        </div>
+                    <div class="col-lg-2 d-none d-lg-block will-be"><i class="fa fa-hand-o-right" aria-hidden="true"></i></div>
+                    <div class="col-lg-12 d-lg-none d-md-block will-be"><i class="fa fa-hand-o-down" aria-hidden="true"></i></div>
+                    <div class="col-12 col-lg-5 main-timeline-container">
+                        <div id="main-timeline"></div>
                     </div>
                 </div>
-            </div>
             <hr class="m-y-md hidden-md-down">
             <div class="lead pi-buttons">
-                <a class="btn btn-outline-success" href="/install" role="button"><%= t('button.startNow') %></a>
-                <a class="btn btn-outline-info" href="https://github.com/pea3nut/Pxer" role="button"><%= t('button.viewSourceCode') %></a>
+                <a class="btn btn-outline-success" href="/example" role="button">Usage</a>
+                <a class="btn btn-outline-info" href="https://github.com/FoXZilla/short-night/wiki" role="button">Development</a>
             </div>
         </div>
     </div>
+    <div class="jumbotron jumbotron-fluid scale-jumbotron">
+        <h2 class="jumbotron-header">
+            <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+            Aligning by Time Precisely
+            <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+        </h2>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-6 col-md-12 scale-timeline-container">
+                    <div id="scale-timeline"></div>
+                </div>
+                <div class="col-lg-5 col-md-12 p-0">
+                    <div class="scale-code-editor-container">
+                        <div id="scale-code-editor"></div>
+                    </div>
+                    <div class="scale-description">
+                        <ul>
+                            <li>The event A and event B is ended at 2011-3-9.</li>
+                            <li>The event C is started at 2011-3-9.</li>
+                            <li>So, the event A, B and C is aligning in 2011-3-9.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2 class="jumbotron-header">
+                <i class="fa fa-cubes" aria-hidden="true"></i>
+                Arrange the items automatically
+                <i class="fa fa-cubes" aria-hidden="true"></i>
+            </h2>
+            <div class="row conflict-jumbotron-content">
+                <div class="col-md-12 col-lg-4 conflict-timeline-container">
+                    <div id="has-conflict-timeline"></div>
+                </div>
+                <div class="col-lg-2 d-lg-block d-md-none will-be">
+                    <i style="position: relative; top: -0.21em" class="fa fa-magic" aria-hidden="true"></i>
+                    <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="col-lg-12 d-lg-none d-md-block will-be">
+                    <i style="position: relative; top: 0.5em" class="fa fa-magic" aria-hidden="true"></i><br />
+                    <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-12 col-lg-6 conflict-timeline-container">
+                    <div id="no-conflict-timeline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/index.js"></script>
     <% include common/_foot.ejs %>
 </body>
 </html>
