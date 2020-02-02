@@ -17,15 +17,15 @@
                 </div>
             <hr class="m-y-md hidden-md-down">
             <div class="lead pi-buttons">
-                <a class="btn btn-outline-success" href="/example" role="button">Usage</a>
-                <a class="btn btn-outline-info" href="https://github.com/FoXZilla/short-night/wiki" role="button">Development</a>
+                <a class="btn btn-outline-success" href="/example" role="button"><%= t('button.usage') %></a>
+                <a class="btn btn-outline-info" href="https://github.com/FoXZilla/short-night/wiki" role="button"><%= t('button.development') %></a>
             </div>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid scale-jumbotron">
         <h2 class="jumbotron-header">
             <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-            Aligning by Time Precisely
+            <%= t('header.alignTime') %>
             <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
         </h2>
         <div class="container">
@@ -39,9 +39,9 @@
                     </div>
                     <div class="scale-description">
                         <ul>
-                            <li>The event A and event B is ended at 2011-3-9.</li>
-                            <li>The event C is started at 2011-3-9.</li>
-                            <li>So, the event A, B and C is aligning in 2011-3-9.</li>
+                            <li><%= t('phrase.alignDescriptions.0') %></li>
+                            <li><%= t('phrase.alignDescriptions.1') %></li>
+                            <li><%= t('phrase.alignDescriptions.2') %></li>
                         </ul>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
         <div class="container">
             <h2 class="jumbotron-header">
                 <i class="fa fa-cubes" aria-hidden="true"></i>
-                Arrange the items automatically
+                <%= t('header.autoArrange') %>
                 <i class="fa fa-cubes" aria-hidden="true"></i>
             </h2>
             <div class="row conflict-jumbotron-content">

@@ -6,14 +6,22 @@
     "examples": "示例"
   },
   "header": {
+    "autoArrange": "自动排列元素",
+    "alignTime": "精准按时间对齐",
     "examples": "示例"
   },
   "phrase": {
+    "alignDescriptions": [
+      "事件 A 和 B 结束与 2011-3-9.",
+      "事件 C 开始于 2011-3-9.",
+      "所以事件 A、B、C 应该在 2011-3-9 对齐"
+    ],
     "examples": "使用 Short-Night 引擎开发的时间线们"
   },
   "button": {
     "view": "查看",
     "usage": "使用",
+    "development": "使用引擎开发",
     "expand": "展开"
   },
   "seo": {

@@ -25,6 +25,11 @@ module.exports = function ({ defaultLang }) {
                     || key
                 );
             },
+            parseMapT(strOrMap) {
+                if (typeof strOrMap === 'string') return strOrMap;
+
+                return strOrMap[lang] || strOrMap['en'];
+            }
         };
         next();
     }

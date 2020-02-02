@@ -23,12 +23,14 @@ Object.assign(EXAMPLE, {
         }
     },
 
+    el: '#timeline',
+
     async setEvents(data) {
         if (this._scaleFlask) throw new Error();
 
         this._scaleFlask = new CodeFlask('#code-editor', {
             language: 'js',
-            lineNumbers: true,
+            // lineNumbers: true,
             defaultTheme: false,
         });
         this._scaleFlask.updateCode(JSON.stringify(data, null, '    '));
@@ -74,7 +76,7 @@ Object.assign(EXAMPLE, {
 
     document.getElementById('save-timeline').addEventListener(
         'click',
-        () => EXAMPLE.timeline.downloadImage(),
+        () => EXAMPLE._timeline.downloadImage(),
     );
 
 

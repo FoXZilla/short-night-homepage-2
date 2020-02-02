@@ -363,6 +363,12 @@ body {
   $readmeViewHeight: 350px;
   .code-container {
     min-height: 300px;
+    #code-editor {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
   }
   .readme-view-placeholder {
     height: $readmeViewHeight;
@@ -459,11 +465,10 @@ body {
   background: #1c1c1c;
   color: #c3e88d;
 
-  .codeflask__flatten {
-    font-size: 16px;
-  }
   .codeflask__lines {
     background: #1c1c1c;
+    z-index: 3;
+    border-right: 1px solid #999;
   }
   .codeflask__textarea {
     color: transparent;

@@ -9,6 +9,7 @@ router.use('/jquery', express.static(path.resolve('./node_modules/jquery/dist'))
 router.use('/font-awesome', express.static(path.resolve('./node_modules/font-awesome')));
 router.use('/moveto', express.static(path.resolve('./node_modules/moveto/dist')));
 router.use('/rules', express.static(path.resolve('./node_modules/@foxzilla/rules/dist/')));
+router.use('/polar-day', express.static(path.resolve('./node_modules/@foxzilla/polar-day/dist/')));
 router.use('/codeflask', express.static(path.resolve('./node_modules/codeflask/build/')));
 router.use('/marked', express.static(path.resolve('./node_modules/marked/')));
 router.use('/vue', express.static(path.resolve('./node_modules/vue/dist/')));

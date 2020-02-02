@@ -8,19 +8,19 @@
             <p class="lead"><%= t('phrase.examples') %></p>
         </div>
     </div>
-    <div class="container">
+    <div class="container mb-5">
         <div class="row">
             <% for (const item of example) { %>
                 <div class="col-6 col-md-4 col-lg-3 mb-4">
-                    <div class="card">
+                    <div class="card h-100">
                         <img src="<%= item.bannerImage %>" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title"><%= item.title %></h5>
-                            <p class="card-text"><%= item.description %></p>
-                            <div class="text-right">
-                                <a href="<%= item.usageUrl %>" target="_blank" class="btn btn-secondary"><%= t('button.usage') %></a>
-                                <a href="/example/<%= item.route %>" class="btn btn-primary"><%= t('button.view') %></a>
-                            </div>
+                            <h5 class="card-title"><%= parseMapT(item.title) %></h5>
+                            <p class="card-text"><%= parseMapT(item.description) %></p>
+                        </div>
+                        <div class="card-footer text-right bg-white">
+                            <a href="<%= item.usageUrl %>" target="_blank" class="btn btn-secondary mr-2"><%= t('button.usage') %></a>
+                            <a href="/example/<%= item.route %>" class="btn btn-primary"><%= t('button.view') %></a>
                         </div>
                     </div>
                 </div>

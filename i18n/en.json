@@ -6,14 +6,22 @@
     "examples": "Examples"
   },
   "header": {
+    "autoArrange": "Arrange the items automatically",
+    "alignTime": "Aligning by Time Precisely",
     "examples": "Examples"
   },
   "phrase": {
+    "alignDescriptions": [
+      "The event A and event B is ended at 2011-3-9.",
+      "The event C is started at 2011-3-9.",
+      "So, the event A, B and C is aligning in 2011-3-9."
+    ],
     "examples": "There are many timelines developed base on Short-Night."
   },
   "button": {
     "view": "View",
     "usage": "Usage",
+    "development": "Development",
     "expand": "Expand"
   },
   "seo": {

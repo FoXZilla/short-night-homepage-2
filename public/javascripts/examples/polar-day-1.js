@@ -63,5 +63,5 @@
     }];
 
     EXAMPLE.setEvents(timelineData);
-    EXAMPLE.setTimeline(await Rules.draw(EXAMPLE.el, timelineData))
+    EXAMPLE.setTimeline(await PolarDay.draw(EXAMPLE.el, timelineData))
 })();
